@@ -1,3 +1,9 @@
 from django.contrib import admin
+from django import forms
 
-# Register your models here.
+
+from .models import VerifiedTag, UnverifiedTag
+
+@admin.register(VerifiedTag)
+class VerifiedTagAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'user')

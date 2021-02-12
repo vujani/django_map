@@ -1,0 +1,15 @@
+<h3 style="color: #fff">Добавить метку</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.name }}<br>
+    {{ form.description }}<br>
+    {{ form.image }}<br>
+    {{ form.location }}<br>
+    {{ form.x_coord }}<br>
+    {{ form.y_coord }}<br>
+    {{ form.user }}<br>
+
+    <button type="submit">Добавить</button>
+    <span>{{ error }}</span>
+
+</form>

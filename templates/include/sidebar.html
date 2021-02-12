@@ -3,6 +3,12 @@ visibility: hidden; z-index: 1000; position: absolute; top: 6vh; right: 0;">
     <button type="button" class="btn btn-secondary"
             style="margin: 5%; position: absolute; right: 0"
             onclick="document.getElementById('sidebar').style.visibility = 'hidden'">
-        X Close
+        Закрыть
     </button>
+
+    {% if user.is_authenticated %}
+        {% include 'include/forms/add_verified_tag.html' %}
+    {% endif %}
+
+
 </div>
