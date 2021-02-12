@@ -1,5 +1,5 @@
 from .models import VerifiedTag, UnverifiedTag
-from django.forms import ModelForm, TextInput, Textarea, FileField, FloatField, CharField
+from django.forms import ModelForm, TextInput, Textarea
 
 
 class VerifiedTagForm(ModelForm):
@@ -17,6 +17,6 @@ class VerifiedTagForm(ModelForm):
             }),
             'location': TextInput(attrs={
                 'class': 'location-input',
-                'placeholder': 'Мустоположение'
+                'placeholder': 'Местоположение'
             }),
         }

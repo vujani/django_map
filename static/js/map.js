@@ -8,7 +8,14 @@ function init(){
     }, {
     balloonMaxWidth: 200,
     floatIndex: 10
-    });
+    }),
+    objectManager = new ymaps.ObjectManager({
+        // Чтобы метки начали кластеризоваться, выставляем опцию.
+        clusterize: true,
+        // ObjectManager принимает те же опции, что и кластеризатор.
+        gridSize: 32,
+        clusterDisableClickZoom: true
+        });
     myMap.controls.remove('trafficControl');
     myMap.controls.remove('geolocationControl');
     myMap.controls.remove('searchControl');
@@ -75,4 +82,18 @@ function init(){
             myMap.balloon.close();
         }
     });
+
+
+    // Чтобы задать опции одиночным объектам и кластерам,
+    // обратимся к дочерним коллекциям ObjectManager.
+    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
+    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    myMap.geoObjects.add(objectManager);
+
+    $.ajax({
+        url: "static/tags/tags.json"
+    }).done(function(data) {
+        objectManager.add(data);
+    });
+
 }

@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
+
+
 class VerifiedTag(models.Model):
     name = models.CharField('Название', max_length=30)
     description = models.TextField('Описание', max_length=100)

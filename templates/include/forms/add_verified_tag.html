@@ -1,4 +1,5 @@
 <h3 style="color: #fff">Добавить метку</h3>
+
 <form method="post">
     {% csrf_token %}
     {{ form.name }}<br>
@@ -9,7 +10,9 @@
     {{ form.y_coord }}<br>
     {{ form.user }}<br>
 
-    <button type="submit">Добавить</button>
     <span>{{ error }}</span>
+    <button type="submit">Добавить</button>
+
 
 </form>
+
