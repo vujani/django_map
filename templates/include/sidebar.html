@@ -7,7 +7,7 @@ visibility: hidden; z-index: 10000; position: absolute; top: 6vh; right: 0;">
     </button>
 
     {% if user.is_authenticated %}
-        {% include 'include/forms/add_verified_tag.html' %}
+        {% include 'include/forms/add_verified_tag.html' with form=form foo=bar %}
     {% endif %}
 
 

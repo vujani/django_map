@@ -59,19 +59,20 @@ function init(){
         },
 
         ButtonYes: function() {
-          myMap.balloon.close();
-          var sidebar = document.getElementById('sidebar')
+            myMap.balloon.close();
+            var sidebar = document.getElementById('sidebar')
             sidebar.style.visibility = 'visible'
         }
       });
-
 
     // Обработка события, возникающего при щелчке
     // левой кнопкой мыши в любой точке карты.
     // При возникновении такого события откроем балун.
     myMap.events.add('click', function (e) {
+        var coords = e.get('coords');
+        $("#id_point_x").val(coords[0]);
+        $("#id_point_y").val(coords[1]);
         if (!myMap.balloon.isOpen()) {
-            var coords = e.get('coords');
             myMap.balloon.open(coords, {
                 name: "single balloon"
                 }, {
@@ -82,7 +83,6 @@ function init(){
             myMap.balloon.close();
         }
     });
-
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.

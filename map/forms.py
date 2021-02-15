@@ -19,4 +19,13 @@ class VerifiedTagForm(ModelForm):
                 'class': 'location-input',
                 'placeholder': 'Местоположение'
             }),
+            'x_coord': TextInput(attrs={
+                'id': 'id_point_x'
+            }),
+            'y_coord': TextInput(attrs={
+                'id': 'id_point_y'
+            }),
+            'user': TextInput(attrs={
+                'id': 'user_input'
+            }),
         }

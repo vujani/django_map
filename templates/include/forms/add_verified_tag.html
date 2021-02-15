@@ -9,10 +9,8 @@
     {{ form.x_coord }}<br>
     {{ form.y_coord }}<br>
     {{ form.user }}<br>
-
-    <span>{{ error }}</span>
     <button type="submit">Добавить</button>
-
-
 </form>
-
+<script>
+    $("#user_input").val('{{ user.username }}');
+</script>
