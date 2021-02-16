@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect
 
 from .forms import TagForm, UnverifiedTagForm
@@ -11,7 +10,10 @@ def index(request):
     if request.method == 'POST' and 'btnform1' in request.POST:
         form = TagForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            tag = form.save(commit=False)
+            tag.image = request.FILES['image']
+            # tag.UserID = request.user !!!!!!!!!!!!
+            tag.save()
             return render(request, 'include/tag_added.html')
         else:
             return render(request, 'include/error.html')
@@ -19,7 +21,10 @@ def index(request):
     if request.method == 'POST' and 'btnform2' in request.POST:
         form = UnverifiedTagForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            tag = form.save(commit=False)
+            tag.image = request.FILES['image']
+            # tag.UserID = request.user !!!!!!!!!!!!
+            tag.save()
             return render(request, 'include/tag_added.html')
         else:
             return render(request, 'include/error.html')

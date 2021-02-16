@@ -1,7 +1,7 @@
 <div style="margin-top: 5%; margin-left: 5%">
     <h3 style="color: #fff">Добавить метку</h3>
 
-    <form method="post" style="margin-top: 10%">
+    <form method="post" enctype="multipart/form-data" class="post-form" style="margin-top: 10%">
         {% csrf_token %}
         {{ form2.name }}<br>
         {{ form2.description }}<br>
