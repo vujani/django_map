@@ -1,16 +1,20 @@
-<h3 style="color: #fff">Добавить метку</h3>
+<div style="margin-top: 5%; margin-left: 5%">
+    <h3 style="color: #fff">Добавить метку</h3>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.name }}<br>
-    {{ form.description }}<br>
-    {{ form.image }}<br>
-    {{ form.location }}<br>
-    {{ form.x_coord }}<br>
-    {{ form.y_coord }}<br>
-    {{ form.user }}<br>
-    <button type="submit">Добавить</button>
-</form>
-<script>
-    $("#user_input").val('{{ user.username }}');
-</script>
+    <form method="post" style="margin-top: 10%">
+        {% csrf_token %}
+        {{ form.name }}<br>
+        {{ form.description }}<br>
+        {{ form.image }}<br>
+        {{ form.location }}<br>
+        <button type="submit" class="btn btn-primary" style="margin-top: 5%">Добавить</button>
+        {{ form.x_coord }}<br>
+        {{ form.y_coord }}<br>
+        {{ form.user }}<br>
+
+
+
+    </form>
+</div>
+
+

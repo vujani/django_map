@@ -9,12 +9,24 @@
 </head>
 
 <body>
+    <div>
+        {% include 'include/header.html' %}
+    </div>
 
 
-    <h1>Что-то пошло не так(</h1><br>
 
-    <a href="/" style="margin-top: 10%">Вернуться на главную страницу</a>
 
+
+    <div>
+
+        {{ tags }}
+
+
+    </div>
+
+    <div>
+        {% include 'include/footer.html' %}
+    </div>
 
 
 </body>
