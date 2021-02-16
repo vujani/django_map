@@ -1,5 +1,5 @@
 from .models import UnverifiedTag, Tag
-from django.forms import ModelForm, TextInput, Textarea, EmailInput, ImageField, FileInput
+from django.forms import ModelForm, TextInput, Textarea, EmailInput
 
 
 class TagForm(ModelForm):
@@ -30,11 +30,6 @@ class TagForm(ModelForm):
                 'id': 'id_point_y',
                 'style': 'visibility: hidden'
             }),
-            'images': ImageField(attrs={
-                'id': 'id_point_y',
-                'style': 'visibility: hidden'
-            }),
-
         }
 
 
