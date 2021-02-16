@@ -1,0 +1,18 @@
+<div style="margin-top: 5%; margin-left: 5%">
+    <h3 style="color: #fff">Добавить метку</h3>
+
+    <form method="post" style="margin-top: 10%">
+        {% csrf_token %}
+        {{ form2.name }}<br>
+        {{ form2.description }}<br>
+        {{ form2.image }}<br>
+        {{ form2.location }}<br>
+        {{ form2.x_coord }}<br>
+        {{ form2.y_coord }}<br>
+        {{ form2.username }}<br>
+        {{ form2.email }}<br>
+        <button type="submit" name="btnform2" class="btn btn-primary" style="margin-top: 5%">Добавить</button>
+    </form>
+</div>
+
+

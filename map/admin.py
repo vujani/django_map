@@ -2,9 +2,13 @@ from django.contrib import admin
 from django import forms
 
 
-from .models import VerifiedTag, UnverifiedTag
+from .models import UnverifiedTag, Tag
 
-@admin.register(VerifiedTag)
-class VerifiedTagAdmin(admin.ModelAdmin):
+@admin.register(UnverifiedTag)
+class UnverifiedTagAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'username', 'email')
+
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'user')
-    #list_display = ('id', 'name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'image')

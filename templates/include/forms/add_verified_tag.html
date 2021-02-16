@@ -7,12 +7,13 @@
         {{ form.description }}<br>
         {{ form.image }}<br>
         {{ form.location }}<br>
-        <button type="submit" class="btn btn-primary" style="margin-top: 5%">Добавить</button>
+        <button type="submit" name="btnform1" class="btn btn-primary" style="margin-top: 5%">Добавить</button>
         {{ form.x_coord }}<br>
         {{ form.y_coord }}<br>
         {{ form.user }}<br>
 
-
+    <script>$("#id_user").val({{ user.id }});</script>
+    <script>$("#id_user").css("visibility", "hidden");</script>
 
     </form>
 </div>

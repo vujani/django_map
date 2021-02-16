@@ -17,9 +17,14 @@
 
 
 
-    <div>
+    <div style="margin-top: 5%; margin-left: 5%">
 
-        {{ tags }}
+        {% for tag in tags %}
+            <h3>{{ tag.name }}</h3>
+            <p>{{ tag.description }}</p>
+            <hr>
+        {% endfor %}
+
 
 
     </div>
