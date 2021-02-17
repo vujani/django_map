@@ -95,5 +95,13 @@ function init(){
     }).done(function(data) {
         objectManager.add(data);
     });
-
 }
+
+
+
+
+
+
+
+
+

@@ -1,8 +1,53 @@
 {
     "type": "FeatureCollection",
     "features": [
-        {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [48.4834, 135.066]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
-        {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [48.4822, 135.086]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}},
-        {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [48.4809, 135.060]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://yandex.ru'>Здесь может быть ваша ссылка</a></b></font>", "balloonContentBody": "<p>Ваше имя: <input name='login'></p><p><em>Телефон в формате 2xxx-xxx:</em>  <input></p><p><input type='submit' value='Отправить'></p>", "balloonContentFooter": "<font size=1>Информация предоставлена: </font> <strong>этим балуном</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>Текст  <s>подсказки</s></strong>"}}
+        {
+            "type": "Feature",
+            "id": 32,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.50015439441277,
+                    135.0555233967285
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 1</div></b></font>",
+                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1</div>",
+                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 33,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.50072480370739,
+                    135.08316087841794
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 2</div></b></font>",
+                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2</div>",
+                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 34,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.480870762880706,
+                    135.07354784130857
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 3</div></b></font>",
+                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3</div>",
+                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
+            }
+        }
     ]
 }
