@@ -1,12 +1,15 @@
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect
 import json
 import io
+from .models import Images, UImages
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse
 from django.core.mail import EmailMessage
-from .forms import TagForm, UnverifiedTagForm
+from .forms import TagForm, UnverifiedTagForm, ExtendedUnverifiedTagForm, ExtendedTagForm
 from map.models import Tag, UnverifiedTag
 from django_map.settings import MODERATOR_EMAIL
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
 
 # function to add to JSON
 def write_json(data, filename='static/tags/tags.json'):
@@ -74,15 +77,23 @@ def index(request):
                 description=tag.description,
                 location=tag.location,
                 user=tag.user,
-                image=tag.image.url)
+                image='')
 
     if request.method == 'POST' and 'btnform1' in request.POST:
-        form = TagForm(request.POST, request.FILES)
+        form = ExtendedTagForm(request.POST or None, request.FILES or None)
+        files = request.FILES.getlist('images')
         if form.is_valid():
-            tag = form.save(commit=False)
-            tag.image = request.FILES['image']
-            # tag.UserID = request.user !!!!!!!!!!!!
-            tag.save()
+            name = form.cleaned_data['name']
+            description = form.cleaned_data['description']
+            location = form.cleaned_data['location']
+            x_coord = form.cleaned_data['x_coord']
+            y_coord = form.cleaned_data['y_coord']
+            user = request.user
+            tag_obj = Note.objects.create(user=user, name=name, description=description,
+                                           location=location, x_coord=x_coord, y_coord=y_coord)
+            for f in files:
+                Images.objects.create(tag_object=tag_obj, image=f)
+
 
             return render(request, 'include/tag_added.html')
         else:
@@ -126,6 +137,7 @@ def info(request):
 def ternms_of_use(request):
     return render(request, 'termsofuse.html')
 
+@login_required(login_url='/accounts/login/')
 def my_tags(request):
     tag_list = Tag.objects.filter(user=request.user)
     paginator = Paginator(tag_list, 3)
@@ -142,6 +154,7 @@ def my_tags(request):
                    'tags': tags})
 
 
+@login_required(login_url='/accounts/login/')
 def admin_tags(request):
     tag_list = UnverifiedTag.objects.all()
 

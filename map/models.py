@@ -1,16 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
-import uuid
+from django.template.defaultfilters import slugify
 
 
 class UnverifiedTag(models.Model):
 
-    def images_directory_path(instance, filename):
-        return '/'.join(['images', str(uuid.uuid4().hex + ".png")])
 
     name = models.CharField('Название', max_length=30)
     description = models.TextField('Описание', max_length=100)
-    image = models.FileField('Изображение', upload_to=images_directory_path, default="no pic")
     location = models.CharField('Местоположение', max_length=30)
     x_coord = models.FloatField('Координата X')
     y_coord = models.FloatField('Координата Y')
@@ -28,12 +25,9 @@ class UnverifiedTag(models.Model):
 
 
 class Tag(models.Model):
-    def images_directory_path(instance, filename):
-        return '/'.join(['images', str(uuid.uuid4().hex + ".png")])
 
     name = models.CharField('Название', max_length=30)
     description = models.TextField('Описание', max_length=100)
-    image = models.ImageField('Изображение', upload_to=images_directory_path, default="no pic")
     location = models.CharField('Местоположение', max_length=30)
     x_coord = models.FloatField('Координата X')
     y_coord = models.FloatField('Координата Y')
@@ -46,3 +40,18 @@ class Tag(models.Model):
         verbose_name = 'Метка'
         verbose_name_plural = 'Метки'
 
+
+def get_image_filename(instance, filename):
+    title = instance.post.title
+    slug = slugify(title)
+    return "post_images/%s-%s" % (slug, filename)
+
+
+class Images(models.Model):
+    tag_object = models.ForeignKey(Tag, on_delete=models.CASCADE)
+    image = models.ImageField('Изображение', upload_to=get_image_filename, null=True, blank=True)
+
+
+class UImages(models.Model):
+    tag_object = models.ForeignKey(UnverifiedTag, on_delete=models.CASCADE)
+    image = models.ImageField('Изображение', upload_to=get_image_filename, null=True, blank=True)

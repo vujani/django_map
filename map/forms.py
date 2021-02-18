@@ -1,11 +1,11 @@
 from .models import UnverifiedTag, Tag
-from django.forms import ModelForm, TextInput, Textarea, EmailInput
+from django.forms import ModelForm, TextInput, Textarea, EmailInput, ClearableFileInput, FileField
 
 
 class TagForm(ModelForm):
     class Meta:
         model = Tag
-        fields = ['name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'user']
+        fields = ['name', 'description', 'location', 'x_coord', 'y_coord', 'user']
         widgets = {
             'name': TextInput(attrs={
                 'class': 'name_input',
@@ -36,7 +36,7 @@ class TagForm(ModelForm):
 class UnverifiedTagForm(ModelForm):
     class Meta:
         model = UnverifiedTag
-        fields = ['name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'username', 'email']
+        fields = ['name', 'description', 'location', 'x_coord', 'y_coord', 'username', 'email']
         widgets = {
             'name': TextInput(attrs={
                 'class': 'name_input',
@@ -73,3 +73,16 @@ class UnverifiedTagForm(ModelForm):
             }),
 
         }
+
+class ExtendedTagForm(TagForm):
+    images = FileField(widget=ClearableFileInput(attrs={'multiple': True}))
+
+    class Meta(TagForm.Meta):
+        fields = TagForm.Meta.fields + ['images',]
+
+
+class ExtendedUnverifiedTagForm(UnverifiedTagForm):
+    images = FileField(widget=ClearableFileInput(attrs={'multiple': True}))
+
+    class Meta(UnverifiedTagForm.Meta):
+        fields = UnverifiedTagForm.Meta.fields + ['images',]
