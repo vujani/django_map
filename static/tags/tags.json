@@ -3,50 +3,34 @@
     "features": [
         {
             "type": "Feature",
-            "id": 32,
+            "id": 38,
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    48.50015439441277,
-                    135.0555233967285
+                    48.4470781058356,
+                    134.93965196728513
                 ]
             },
             "properties": {
-                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 1</div></b></font>",
-                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1\u043c\u0435\u0442\u043a\u0430 1</div>",
-                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 5</div></b></font>",
+                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430\u043c\u0435\u0442\u043a\u0430</div><img src='/media/images/2eea07be54a44adab07e3da0027d9058.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
             }
         },
         {
             "type": "Feature",
-            "id": 33,
+            "id": 39,
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    48.50072480370739,
-                    135.08316087841794
+                    48.494564041638846,
+                    135.08110094189448
                 ]
             },
             "properties": {
-                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 2</div></b></font>",
-                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2\u043c\u0435\u0442\u043a\u0430 2</div>",
-                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
-            }
-        },
-        {
-            "type": "Feature",
-            "id": 34,
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    48.480870762880706,
-                    135.07354784130857
-                ]
-            },
-            "properties": {
-                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 3</div></b></font>",
-                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3\u043c\u0435\u0442\u043a\u0430 3</div>",
-                "balloonContentFooter": "<div>\u0410\u0432\u0442\u043e\u0440</div>"
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>1</div></b></font>",
+                "balloonContentBody": "<div>1</div><img src='/media/images/10f6f56a6a844dd79d383d26e7eb8e0a.png' height='150' width='200'> <br/><div>1</div>",
+                "balloonContentFooter": "<div>admin</div>"
             }
         }
     ]

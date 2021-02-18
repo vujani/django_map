@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% load static %}
+    <title>Fogstream|Интерактивная карта</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+</head>
+
+<body>
+    <div>
+        {% include 'include/header.html' %}
+    </div>
+
+
+
+
+
+    <div style="margin-top: 5%; margin-left: 5%">
+
+        {% for tag in tags %}
+            <h3>{{ tag.name }}</h3>
+            <p>{{ tag.description }}</p>
+            <hr>
+        {% endfor %}
+
+
+
+    </div>
+
+    <div>
+        {% include 'include/footer.html' %}
+    </div>
+
+
+</body>
+
+</html>
