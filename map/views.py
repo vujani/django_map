@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 import json, io
+from django.core.mail import EmailMessage
 
 from .forms import TagForm, UnverifiedTagForm
 from map.models import Tag, UnverifiedTag
+from django_map.settings import MODERATOR_EMAIL
 
 
 # function to add to JSON
@@ -92,6 +94,12 @@ def index(request):
             tag.image = request.FILES['image']
             # tag.UserID = request.user !!!!!!!!!!!!
             tag.save()
+            message = EmailMessage(
+                'Запрос на создание метки',
+                'Name:'+tag.name+' Description:'+tag.description+'',
+                to=[MODERATOR_EMAIL]
+            )
+            message.send()
             return render(request, 'include/tag_added.html')
         else:
             return render(request, 'include/error.html')
