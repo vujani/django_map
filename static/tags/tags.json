@@ -3,34 +3,178 @@
     "features": [
         {
             "type": "Feature",
-            "id": 38,
+            "id": 42,
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    48.4470781058356,
-                    134.93965196728513
+                    48.49547679465185,
+                    135.0591282856445
                 ]
             },
             "properties": {
-                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u043c\u0435\u0442\u043a\u0430 5</div></b></font>",
-                "balloonContentBody": "<div>\u043c\u0435\u0442\u043a\u0430\u043c\u0435\u0442\u043a\u0430</div><img src='/media/images/2eea07be54a44adab07e3da0027d9058.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04301.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/9fb787f6ea4d4a01bb740854f1568dbe.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
                 "balloonContentFooter": "<div>admin</div>"
             }
         },
         {
             "type": "Feature",
-            "id": 39,
+            "id": 43,
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    48.494564041638846,
-                    135.08110094189448
+                    48.49638953113557,
+                    135.08161592602536
                 ]
             },
             "properties": {
-                "balloonContentHeader": "<font size=3><b><div id='output_name'>1</div></b></font>",
-                "balloonContentBody": "<div>1</div><img src='/media/images/10f6f56a6a844dd79d383d26e7eb8e0a.png' height='150' width='200'> <br/><div>1</div>",
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04302.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/f6f4fc74b51c4a5aaa01db30ec3ebe1d.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
                 "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 44,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.49616134856426,
+                    135.1001553547363
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04303.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/b06a0e1543b0427ba82849cb8267011f.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 45,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.49638953113557,
+                    135.1186947834472
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04304.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/fbc9abf1caec4be79f580e2d68271c81.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 46,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.497074072651074,
+                    135.14392900585932
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04305.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/33fa6210550b4a0da865c1be0ac11e5c.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 47,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.49673180305554,
+                    135.16075182080075
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04306.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/f74b9f708ecf4c6387009350cd6d6909.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 48,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.496959983044164,
+                    135.17602968334958
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04307.admin</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/ab6e050cd11d420eb150a447cad81f35.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 49,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.48463678530136,
+                    135.05998659252924
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04301.test1</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/205029a6c1814970b455aafd2d689ed4.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>test1</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 50,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.48669086079659,
+                    135.08178758740232
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04302.test1</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/ada18b7822364ca7b62e99ad5278e81b.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>test1</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 51,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.48634852069207,
+                    135.1018719685058
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04303.test3</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/bb493732b12b4343a72a3c13de1059ed.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>test1</div>"
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 52,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.48543560238226,
+                    135.1202397358398
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>\u041c\u0435\u0442\u043a\u04304.test1</div></b></font>",
+                "balloonContentBody": "<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</div><img src='/media/images/c005aeb3383b44d886fdc1ff04c64fd8.png' height='150' width='200'> <br/><div>\u0425\u0430\u0431\u0430\u0440\u043e\u0432\u0441\u043a</div>",
+                "balloonContentFooter": "<div>test1</div>"
             }
         }
     ]

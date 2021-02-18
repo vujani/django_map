@@ -13,27 +13,32 @@
         {% include 'include/header.html' %}
     </div>
 
+<main style="margin-top: 5%">
+    {% for tag in tags %}
 
-
-
-
-    <div style="margin-top: 5%; margin-left: 5%">
-
-        {% for tag in tags %}
-            <h3>{{ tag.name }}</h3>
-            <p>{{ tag.description }}</p>
-            <hr>
-        {% endfor %}
-
-
-
-    </div>
+        <div class="col" style="margin-top: 20px">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="navbar-brand" style="color: #005cbf"><b>{{ tag.name }}</b></p>
+              <p class="card-text" style="width: 50%;">{{ tag.description }}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group" style="display: block">
+                    <small class="text-muted" style="border-radius: 5px; border: 1px solid #696969; padding: 2px">{{ tag.x_coord }}</small><br>
+                    <small class="text-muted" style="border-radius: 5px; border: 1px solid #696969; padding: 2px">{{ tag.y_coord }}</small><br>
+                    <small class="text-muted">{{ tag.location }}</small>
+                </div>
+                <small class="text-muted">{{ tag.user.username }}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    {% include 'include/pagination.html' with page=tags %}
+</main>
 
     <div>
         {% include 'include/footer.html' %}
     </div>
 
-
 </body>
-
 </html>

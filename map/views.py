@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
-import json, io
+import json
+import io
 from django.core.mail import EmailMessage
-
 from .forms import TagForm, UnverifiedTagForm
 from map.models import Tag, UnverifiedTag
 from django_map.settings import MODERATOR_EMAIL
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 # function to add to JSON
@@ -126,11 +127,33 @@ def ternms_of_use(request):
     return render(request, 'termsofuse.html')
 
 def my_tags(request):
-    tags = Tag.objects.filter(user=request.user)
+    tag_list = Tag.objects.filter(user=request.user)
+    paginator = Paginator(tag_list, 3)
+    page = request.GET.get('page')
+    try:
+        tags = paginator.page(page)
+    except PageNotAnInteger:
+        tags = paginator.page(1)
+    except EmptyPage:
+        tags = paginator.page(paginator.num_pages)
+    return render(request,
+                  'my_tags.html',
+                  {'page': page,
+                   'tags': tags})
 
-    return render(request, 'my_tags.html', {'tags': tags})
 
 def admin_tags(request):
-    tags = UnverifiedTag.objects.all()
+    tag_list = UnverifiedTag.objects.all()
 
-    return render(request, 'admin_tags.html', {'tags': tags})
+    paginator = Paginator(tag_list, 3)
+    page = request.GET.get('page')
+    try:
+        tags = paginator.page(page)
+    except PageNotAnInteger:
+        tags = paginator.page(1)
+    except EmptyPage:
+        tags = paginator.page(paginator.num_pages)
+    return render(request,
+                  'admin_tags.html',
+                  {'page': page,
+                   'tags': tags})

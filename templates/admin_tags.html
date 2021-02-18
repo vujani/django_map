@@ -13,21 +13,42 @@
         {% include 'include/header.html' %}
     </div>
 
+<main style="margin-top: 5%">
+    {% for tag in tags %}
 
+        <div class="col" style="margin-top: 20px">
+          <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="navbar-brand" style="color: #005cbf"><b>{{ tag.name }}</b></p>
+                    <div>
+                        <button style="border-radius: 5px; border: 2px solid green; padding: 2px">Добавить</button>
+                        <button style="border-radius: 5px; border: 2px solid red; padding: 2px">Удалить</button>
+                    </div>
 
+                </div>
 
+              <p class="card-text" style="width: 50%;">{{ tag.description }}</p>
 
-    <div style="margin-top: 5%; margin-left: 5%">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group" style="display: block">
+                    <small class="text-muted" style="border-radius: 5px; border: 1px solid #696969; padding: 2px">{{ tag.x_coord }}</small><br>
+                    <small class="text-muted" style="border-radius: 5px; border: 1px solid #696969; padding: 2px">{{ tag.y_coord }}</small><br>
+                    <small class="text-muted">{{ tag.location }}</small>
+                </div>
 
-        {% for tag in tags %}
-            <h3>{{ tag.name }}</h3>
-            <p>{{ tag.description }}</p>
-            <hr>
-        {% endfor %}
+                    <div style="display: block;">
+                        <small class="text-muted" >{{ tag.username }}</small><br>
+                        <small class="text-muted" >{{ tag.email }}</small>
+                    </div>
 
-
-
-    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+    {% include 'include/pagination.html' with page=tags %}
+</main>
 
     <div>
         {% include 'include/footer.html' %}
