@@ -21,4 +21,8 @@ class ImagesAdmin(admin.ModelAdmin):
 
 @admin.register(UImages)
 class UImagesAdmin(admin.ModelAdmin):
+<<<<<<< Updated upstream
     list_display = ('id', 'image')
+=======
+    list_display = ('id', 'image')
+>>>>>>> Stashed changes

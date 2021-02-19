@@ -6,7 +6,12 @@ from .models import Images, UImages
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.core.mail import EmailMessage
+<<<<<<< Updated upstream
 from .forms import TagForm, UnverifiedTagForm, ExtendedUnverifiedTagForm, ExtendedTagForm
+=======
+from .forms import TagForm, UnverifiedTagForm, ExtendedUnverifiedTagForm, \
+    ExtendedTagForm
+>>>>>>> Stashed changes
 from map.models import Tag, UnverifiedTag
 from django_map.settings import MODERATOR_EMAIL
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -15,6 +20,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def write_json(data, filename='static/tags/tags.json'):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
+
 
 def clear_tags(filename='static/tags/tags.json'):
     with io.open(filename, encoding='utf-8') as json_file:
@@ -47,26 +53,23 @@ def add_tag(filename='static/tags/tags.json',
                  {"type": "Point",
                   "coordinates": [coord_x, coord_y]},
              "properties": {
-                  "balloonContentHeader":
-                      "<font size=3><b><div id='output_name'>"+name+"</div></b></font>",
-                  "balloonContentBody":
-                      "<div>"+description+"</div>"
-                      "<img src='"+image+"' height='150' width='200'> <br/>"
-                      "<div>"+location+"</div>",
+                 "balloonContentHeader":
+                     "<font size=3><b><div id='output_name'>" + name + "</div></b></font>",
+                 "balloonContentBody":
+                     "<div>" + description + "</div>"
+                                             "<img src='" + image + "' height='150' width='200'> <br/>"
+                                                                    "<div>" + location + "</div>",
 
-                        
-                  "balloonContentFooter":
-                      "<div>"+user.username+"</div>"
-                  }}
+                 "balloonContentFooter":
+                     "<div>" + user.username + "</div>"
+             }}
 
         # appending data
         temp.append(y)
     write_json(data)
 
 
-
 def index(request):
-
     tags = Tag.objects.all()
     clear_tags()
     for tag in tags:
@@ -89,11 +92,18 @@ def index(request):
             x_coord = form.cleaned_data['x_coord']
             y_coord = form.cleaned_data['y_coord']
             user = request.user
+<<<<<<< Updated upstream
             tag_obj = Note.objects.create(user=user, name=name, description=description,
                                            location=location, x_coord=x_coord, y_coord=y_coord)
             for f in files:
                 Images.objects.create(tag_object=tag_obj, image=f)
 
+=======
+            tag_obj = Tag.objects.create(user=user, name=name, description=description, location=location, x_coord=x_coord,
+                                          y_coord=y_coord)
+            for f in files:
+                Images.objects.create(tag_object=tag_obj, image=f)
+>>>>>>> Stashed changes
 
             return render(request, 'include/tag_added.html')
         else:
@@ -108,7 +118,7 @@ def index(request):
             tag.save()
             message = EmailMessage(
                 'Запрос на создание метки',
-                'Name:'+tag.name+' Description:'+tag.description+'',
+                'Name:' + tag.name + ' Description:' + tag.description + '',
                 to=[MODERATOR_EMAIL]
             )
             message.send()
@@ -125,18 +135,26 @@ def index(request):
 
     return render(request, 'base.html', context)
 
+
 def contacts(request):
     return render(request, 'contacts.html')
+
 
 def faq(request):
     return render(request, 'FAQ.html')
 
+
 def info(request):
     return render(request, 'info.html')
+
 
 def ternms_of_use(request):
     return render(request, 'termsofuse.html')
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 @login_required(login_url='/accounts/login/')
 def my_tags(request):
     tag_list = Tag.objects.filter(user=request.user)

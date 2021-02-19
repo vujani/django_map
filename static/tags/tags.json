@@ -224,6 +224,25 @@
                 "balloonContentBody": "<div>sadasd</div><img src='' height='150' width='200'> <br/><div>asd</div>",
                 "balloonContentFooter": "<div>admin</div>"
             }
+<<<<<<< Updated upstream
+=======
+        },
+        {
+            "type": "Feature",
+            "id": 56,
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    48.515096986528874,
+                    135.09363222241208
+                ]
+            },
+            "properties": {
+                "balloonContentHeader": "<font size=3><b><div id='output_name'>q</div></b></font>",
+                "balloonContentBody": "<div>w</div><img src='' height='150' width='200'> <br/><div>qwe</div>",
+                "balloonContentFooter": "<div>admin</div>"
+            }
+>>>>>>> Stashed changes
         }
     ]
 }

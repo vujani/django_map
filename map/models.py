@@ -40,7 +40,10 @@ class Tag(models.Model):
         verbose_name = 'Метка'
         verbose_name_plural = 'Метки'
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 def get_image_filename(instance, filename):
     title = instance.post.title
     slug = slugify(title)
@@ -52,6 +55,28 @@ class Images(models.Model):
     image = models.ImageField('Изображение', upload_to=get_image_filename, null=True, blank=True)
 
 
+<<<<<<< Updated upstream
 class UImages(models.Model):
     tag_object = models.ForeignKey(UnverifiedTag, on_delete=models.CASCADE)
     image = models.ImageField('Изображение', upload_to=get_image_filename, null=True, blank=True)
+=======
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Изображения'
+        verbose_name_plural = 'Изображения'
+
+
+class UImages(models.Model):
+    tag_object = models.ForeignKey(UnverifiedTag, on_delete=models.CASCADE)
+    image = models.ImageField('Изображение', upload_to=get_image_filename, null=True, blank=True)
+
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Изображения(*)'
+        verbose_name_plural = 'Изображения(*)'
+>>>>>>> Stashed changes
