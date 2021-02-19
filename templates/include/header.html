@@ -23,13 +23,13 @@
                     </span>
                 </li>
                 <li class="nav-item" style="margin-right: 3vw">
-                    <a class="nav-link" href='my_tags'>
+                    <a class="nav-link" href='{% url 'my_tags' %}'>
                         Мои метки
                     </a>
                 </li>
                 {% if user.username == 'admin' %}
                     <li class="nav-item" style="margin-right: 3vw">
-                    <a class="nav-link" href='admin_tags'>
+                    <a class="nav-link" href='{% url 'admin_tags' %}'>
                         Администрирование
                     </a>
                 </li>

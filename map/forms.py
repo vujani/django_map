@@ -5,7 +5,16 @@ from django.forms import ModelForm, TextInput, Textarea, EmailInput
 class TagForm(ModelForm):
     class Meta:
         model = Tag
-        fields = ['name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'user']
+        fields = [
+            'name',
+            'description',
+            'image',
+            'location',
+            'x_coord',
+            'y_coord',
+            'user'
+        ]
+
         widgets = {
             'name': TextInput(attrs={
                 'class': 'name_input',
@@ -36,7 +45,17 @@ class TagForm(ModelForm):
 class UnverifiedTagForm(ModelForm):
     class Meta:
         model = UnverifiedTag
-        fields = ['name', 'description', 'image', 'location', 'x_coord', 'y_coord', 'username', 'email']
+        fields = [
+            'name',
+            'description',
+            'image',
+            'location',
+            'x_coord',
+            'y_coord',
+            'username',
+            'email'
+        ]
+
         widgets = {
             'name': TextInput(attrs={
                 'class': 'name_input',
@@ -71,5 +90,4 @@ class UnverifiedTagForm(ModelForm):
                 'placeholder': 'Email',
                 'style': 'border-radius: 5px; border: 2px solid #696969'
             }),
-
         }
