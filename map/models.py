@@ -11,7 +11,7 @@ class UnverifiedTag(models.Model):
     name = models.CharField('Название', max_length=30)
     description = models.TextField('Описание', max_length=100)
     image = models.FileField('Изображение', upload_to=images_directory_path,
-                             default="no pic")
+                             default="no pic", blank=True)
     location = models.CharField('Местоположение', max_length=30)
     x_coord = models.FloatField('Координата X')
     y_coord = models.FloatField('Координата Y')

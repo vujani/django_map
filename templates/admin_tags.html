@@ -6,13 +6,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div>
         {% include 'include/header.html' %}
     </div>
-    {% include 'include/minimap.html' %}
 {% if user.username == 'admin' %}
 <main style="margin-top: 5%">
     {% for tag in tags %}
@@ -23,20 +26,15 @@
                     <p class="navbar-brand" style="color: #005cbf"><b>{{ tag.name }}</b></p>
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <button style="border-radius: 5px; border: 2px solid gray; padding: 2px; height: 35px; width: 35px" onclick="document.getElementById('map').style.visibility = 'visible'"><i>i</i></button>
                             <form method="post" action="{% url 'admin_tags' tag_id=tag.id action='add' %}">
                                 {% csrf_token %}
-                                <button style="border-radius: 5px; border: 2px solid green; padding: 2px">Добавить</button>
-
+                                <button style="border-radius: 5px; border: 2px solid green; padding: 2px; margin-right: 5px">Добавить</button>
                              </form>
                              <form method="post" action="{% url 'admin_tags' tag_id=tag.id action='delete' %}">
                                 {% csrf_token %}
                                  <button style="border-radius: 5px; border: 2px solid red; padding: 2px">Удалить</button>
                              </form>
-
                         </div>
-
-
                 </div>
 
               <p class="card-text" style="width: 50%;">{{ tag.description }}</p>
@@ -67,8 +65,5 @@
     <div>
         {% include 'include/footer.html' %}
     </div>
-
-
 </body>
-
 </html>

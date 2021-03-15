@@ -1,5 +1,5 @@
 from .models import UnverifiedTag, Tag
-from django.forms import ModelForm, TextInput, Textarea, EmailInput
+from django.forms import ModelForm, TextInput, Textarea, EmailInput, FileInput
 
 
 class TagForm(ModelForm):
@@ -25,6 +25,9 @@ class TagForm(ModelForm):
                 'class': 'description_input',
                 'placeholder': 'Введите описание',
                 'style': 'border-radius: 5px; border: 2px solid #696969'
+            }),
+            'image': FileInput(attrs={
+                'required': False
             }),
             'location': TextInput(attrs={
                 'class': 'location_input',
@@ -66,6 +69,9 @@ class UnverifiedTagForm(ModelForm):
                 'class': 'description_input',
                 'placeholder': 'Введите описание',
                 'style': 'border-radius: 5px; border: 2px solid #696969'
+            }),
+            'image': FileInput(attrs={
+                'required': False
             }),
             'location': TextInput(attrs={
                 'class': 'location_input',

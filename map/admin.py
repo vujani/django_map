@@ -4,6 +4,7 @@ from .models import UnverifiedTag, Tag
 
 # fogstream12345 - пароль от пользователей
 # admin - admin
+
 @admin.register(UnverifiedTag)
 class UnverifiedTagAdmin(admin.ModelAdmin):
     list_display = (
