@@ -1,6 +1,6 @@
 from .models import UnverifiedTag, Tag
 from django.forms import ModelForm, TextInput, Textarea, EmailInput, FileInput
-
+from django import forms
 
 class TagForm(ModelForm):
     class Meta:
@@ -97,3 +97,17 @@ class UnverifiedTagForm(ModelForm):
                 'style': 'border-radius: 5px; border: 2px solid #696969'
             }),
         }
+
+class Contactform(forms.Form):
+    subject = forms.CharField(
+        label="Имя",
+        widget=forms.TextInput
+    )
+    from_email = forms.EmailField(
+        label='Почта',
+        widget=forms.EmailInput
+    )
+    message = forms.CharField(
+        label="Сообщение",
+        widget=forms.Textarea
+    )

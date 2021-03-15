@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.core.mail import EmailMessage
-from .forms import TagForm, UnverifiedTagForm
+from .forms import TagForm, UnverifiedTagForm, Contactform
 from map.models import Tag, UnverifiedTag
 from django_map.settings import MODERATOR_EMAIL
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -173,7 +173,23 @@ def index(request):
 
 
 def contacts(request):
-    return render(request, 'contacts.html')
+    if request.method == 'POST':
+        form = Contactform(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            mail_send = EmailMessage(
+                'Обратная связь',
+                'Name:' + subject + ' Description:' + message + 'Отправитель'
+                + from_email,
+                to=[MODERATOR_EMAIL]
+            )
+            mail_send.send()
+            return render(request, 'include/mail_sended.html')
+    else:
+        form = Contactform()
+    return render(request, 'contacts.html', {'form': form})
 
 
 def faq(request):
